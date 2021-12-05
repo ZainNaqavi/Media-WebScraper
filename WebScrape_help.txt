@@ -1,0 +1,151 @@
+
+	*** Media WebScraper Help ***
+
+Scrape information and images for movies and TV shows.
+
+Contents [1-6] of help information:
+	1. Generating a list of media to scrape
+	2. Saving the scraped data
+	3. Specifying search tags for scrape
+	4. Data to be scraped
+	5. Resolving any bad scrapes
+	6. General tips
+
+	*****************************
+---------------------------------------------------------------------------
+
+[1] Generating a list of media to scrape:
+
+- Scrape from a folder:
+	You can specify a folder to scrape media information for.
+	The folder must contain subfolders or files with the media names.
+	The contents of the subfolders themselves will not be scraped.
+	Anything in parentheses will be ignored e.g. [ignored] media name (ignored).
+
+- Scrape from user input:
+	You can choose to manually input your own media list.
+
+The media names must be reasonably accurate for a reliable scrape.
+
+	*****************************
+---------------------------------------------------------------------------
+
+[2] Saving the scraped data:
+
+- Default location:
+	The scraped data will be saved to the location of the program.
+
+- Different location:
+	You can specify a file path to save scraped data.
+
+The scraped data will be saved to a single folder named 'ScrapedData' for a given location.
+
+	*****************************
+---------------------------------------------------------------------------
+
+[3] You can specify to scrape for specific categories (recommended):
+
+- Movie only scrape:
+	This will add a movie tag when searching the online database.
+	Do this if you are only scraping for movies.
+
+- TV only scrape:
+	This will add a TV tag when searching the online database.
+	Do this if you are only scraping for TV shows.
+
+- Anime only scrape:
+	This will add an anime tag when searching the online database.
+	Do this if you are only scraping for anime (movies or TV shows).
+
+- General scrape:
+	No tags will be added when searching the online database.
+	(If you choose not to specify search tags)
+
+If you specify a TV only scrape you will have the option to also scrape episode information.
+
+	*****************************
+---------------------------------------------------------------------------
+
+[4] Scraped data for each media in list:
+
+- Information:
+	This will scrape general information:
+	- Title
+	- Release date
+	- Runtime
+	- Genre
+	- Director
+	- Cast
+	- Plot description
+	Additional information saved:
+	- Source database used for scrape
+	- ID for media in source database
+	- Poster .jpg link
+	Saved as a .txt file.
+
+- Images:
+	This will scrape the poster.
+	Saved as a .jpg file.
+
+- Episode Information (if chosen):
+	This will scrape information for each episode for a TV show:
+	- Season number
+	- Episode number
+	- Episode title
+	- Episode air date
+	- Episode description
+	Saved as a .csv file.
+
+	*****************************
+---------------------------------------------------------------------------
+
+[5] Resolving bad scrapes:
+
+- Unsuccessful scraped data:
+	Error encountered when searching online.
+	Caused by:
+	- Interrupted connection to internet
+	- Search database server issues (unlikely)
+	Options to resolve:
+	- Retrying the scrape will usually solve this
+	- If this continues after retrying several times, try changing your IP address
+
+- Missing scraped data:
+	No results when searching for data.
+	Caused by:
+	- Incorrect media name
+	- Incorrect tags specified
+	- Search database missing information
+	Options to resolve:
+	- Check spelling of media names (cannot change names if you retry the scrape - must restart program)
+	- Check if incorrect tags were specified (can change tags upon retry)
+	- If correct tags were specified try a general search (can change tags upon retry)
+	Missing image/ episode information:
+	- If only poster image missing, the search database does not have an image for the particular media.
+	- If only episode information missing, the search database does not have episode information listed for the particular media.
+
+- Incorrect scraped data:
+	Data scraped for a different media.
+	Caused by:
+	- Incorrect media name
+	- Incorrect tags specified
+	- Search database missing information
+	Options to resolve:
+	- Delete any incorrect scraped files and restart the program with correct names and tags
+
+You will have the option to retry for any bad scrapes (successful scrapes will not be changed).
+
+	*****************************
+---------------------------------------------------------------------------
+
+[6] General tips:
+
+- It is recommended to create separate media lists for movies and TV shows for best results:
+	Run the program for movies only and specify movie search tag
+	Run the program for TV shows only and specify TV search tag
+
+- If you are scraping for a media list containing a mixture of movies, TV shows and anime it is recommended to:
+	Do a general scrape first (no search tags)
+	Rescrape with a TV search tag if you also want to scrape any episode information
+
+	*****************************
